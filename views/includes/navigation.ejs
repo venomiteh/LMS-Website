@@ -1,0 +1,126 @@
+<style>
+    .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 1em 2em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-logo a {
+    text-decoration: none;
+    color: #20c997;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.nav-menu li a:hover {
+    color: #20c997;
+}
+
+/* Icons and CTA */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.cart-icon {
+    font-size: 1.2em;
+    color: #333;
+    text-decoration: none;
+}
+
+.cta-button {
+    padding: 0.5em 1.2em;
+    background-color: #20c997;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: #17a389;
+}
+
+/* Hamburger Menu (Mobile) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 0.3em;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 3px;
+}
+
+/* Media Queries for Mobile */
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        gap: 1em;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: white;
+        padding: 1em;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+
+</style>
+
+<nav class="navbar">
+    <div class="nav-logo">
+        <a href="#">Coder's Hub</a>
+    </div>
+    <ul class="nav-menu">
+        <li><a href="/home">Home</a></li>
+        <li><a href="/courses" >Courses</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+    <div class="nav-icons">
+        <!-- Need a better icon-->
+        <a href="/user/library" class="cart-icon">Library</a>
+        <a href="/auth" class="cta-button">Join For Free</a>
+    </div>
+    <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+</nav>

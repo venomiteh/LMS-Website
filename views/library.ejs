@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library</title>
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="\css\library.css">
+</head>
+<body>
+  <%- include('includes/navigation.ejs')%>
+<div class="content">
+  <div class="header">
+    <h1>Library</h1>
+    <div class="options">
+      <button>Edit</button>
+      <button>Recently read</button>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <div class="tab active">Library</div>
+    
+  </div>
+
+  <div class="library-grid">
+    <!-- Example of a course card -->
+    <div class="course-card">
+      <img src="https://via.placeholder.com/150x200" alt="Course Image">
+      <div class="course-info">
+        <div class="course-title">Test 1</div>
+        <div class="course-progress">Progress x%</div>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="https://via.placeholder.com/150x200" alt="Course Image">
+      <div class="course-info">
+        <div class="course-title">test 2</div>
+        <div class="course-progress">Progress 70%</div>
+      </div>
+    </div>
+
+    <div class="course-card">
+      <img src="https://via.placeholder.com/150x200" alt="Course Image">
+      <div class="course-info">
+        <div class="course-title">test 3</div>
+        <div class="course-progress">Progress 90%</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+
+<footer>
+  <%- include('includes/footer.ejs')%>
+</footer>
+</html>

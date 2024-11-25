@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Course</title>
+    <link rel="stylesheet" href="\css\course_info.css">
+</head>
+<body>
+
+<%- include('includes/navigation.ejs')%>
+   
+    <div class="course-card">
+        <div class="header">
+            <h1 id="course-name">Cybersecurity for Everyone:</h1>
+            <div class="instructor-info">
+                <img src="https://i.pravatar.cc/50" alt="Instructor" class="instructor-image" id="instructor-image">
+                <p>Instructor: <a href="#" id="instructor-name">Charles Harry</a></p>
+            </div>
+        </div>
+
+        <div class="enroll-section">
+            <button class="enroll-btn">Enroll</button>
+            <p class="start-date" id="Price">Price: 0$</p>
+            
+        </div>
+
+        <div class="course-info">
+            <div class="course-detail" id="module">
+                <h3>6 modules</h3>
+                <p>Gain insight into a topic and learn the fundamentals.</p>
+            </div>
+            <div class="course-detail" id="course-avg-reviews">
+                <h3>4.7 <span>★</span></h3>
+                <p>(2,136 reviews)</p>
+            </div>
+            <div class="course-detail" id="course-level">
+                <h3>Beginner level</h3>
+                <p>No prior experience required</p>
+            </div>
+            <div class="course-detail" id="schedule">
+                <h3>Flexible schedule</h3>
+                <p>Approx. 21 hours</p>
+            </div>
+            <div class="course-detail" id="nb-students-enrolled">
+                <h3>Enrolled Students</h3>
+                <p>150+ learners enrolled</p>
+            </div>
+        </div>
+    </div>
+    <div class="details-to-know">
+        <h2>Course Details: </h2>
+        <div class="detail-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn" class="icon">
+            <p><strong>Shareable certificate</strong><br>Add to your LinkedIn profile</p>
+        </div>
+        <div class="detail-box">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Assessment_icon.png" alt="Assessments" class="icon">
+            <p><strong>Assessments</strong><br>6 assignments</p>
+        </div>
+        <div class="detail-box">
+            <a title="Marcmiquel, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Language_icon.png"><img width="64" alt="modified version of a language icon" src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Language_icon.png?20201112103601"></a>            <p><strong>Taught in English</strong></p>
+           
+        </div>
+    </div>
+
+    <div class="learner-reviews">
+        <h2>Learner reviews</h2>
+        <div class="review-summary">
+            <h3 id="avg-rating">★ 0.0</h3>
+            <p id="total-reviews">0 reviews</p>
+            <div class="review-bar">
+                <p>5 stars</p>
+                <div class="bar"><div class="bar-filled" id="5star-bar" style="width: 0%;"></div></div>
+                <p id="5star-percentage">0%</p>
+            </div>
+            <div class="review-bar">
+                <p>4 stars</p>
+                <div class="bar"><div class="bar-filled" id="4star-bar" style="width: 0%;"></div></div>
+                <p id="4star-percentage">0%</p>
+            </div>
+            <!-- Add other stars similarly -->
+        </div>
+
+        <div class="reviews-list" id="reviews-list">
+            <!-- Reviews will be inserted here -->
+            <div class="review-icon">A</div>
+                <div class="review-text">
+                    <h4>★ 5 · Reviewed on Jul 10, 2022</h4>
+                    <p>This course is a very nice one. The lecturer was good, and the project was a nice way to help students understand the integrity of cybersecurity. In all, the course is an excellent one.</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" class="view-more">View more reviews</a>
+    </div>
+</body>
+<footer>
+    <%- include('includes/footer.ejs')%>
+  </footer>
+</html>

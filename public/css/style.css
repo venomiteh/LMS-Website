@@ -1,0 +1,290 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+
+
+
+/* Hero Section */
+.hero {
+    background-color: #F5F2EB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    padding: 4em 2em;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10vh;
+}
+
+.hero-content {
+    margin-left: 10vh;
+    max-width: 40%;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 1em;
+    line-height: 1.2;
+}
+
+.hero-content h1 span {
+    color: #20c997; /* Highlighted color for the word "Enroll" */
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 1.5em;
+}
+
+.hero-content .cta-button {
+    padding: 0.8em 2em;
+    background-color: #20c997;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+.hero-content .cta-button:hover {
+    background-color: #17a389;
+}
+
+/* Hero Images */
+
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    z-index: 0;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.hero-shape-1 {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    width: 150px;
+    z-index: 1;
+}
+
+/* Student Images */
+.hI {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    z-index: 2;
+    margin-left: 90vh;
+
+}
+
+.student-img {
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+   
+}
+
+.courses {
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 10vh;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.course-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.course-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+}
+
+.course-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.course-info {
+    padding: 15px;
+    text-align: left;
+}
+
+.tag {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+.beginner {
+    background-color: #cce5ff;
+    color: #004085;
+}
+
+.intermediate {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.advanced {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.courses h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+ .course-card a{
+text-decoration: none;
+color: black;
+}
+.course-card a:hover{
+    color: #17a389;
+}
+.rating, .price, .details {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.price {
+    font-weight: bold;
+    color: #20c997;
+}
+
+.browse-more {
+    margin-top: 5vh;
+}
+
+.browse-btn {
+    background-color: #20c997;
+  color: white;
+  padding: 0.5em 1.2em;
+  border-radius: 20px;
+  font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+
+
+
+
+.browse-btn:hover {
+    background-color: #17a389;
+ 
+}
+#tag{
+    color: grey;
+}
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .course-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+footer {
+    background-color: #f8f9fa; /* Light grey background to match the theme */
+    color: #333; /* Darker text color for contrast */
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #20c997; /* Consistent green color for the logo */
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.footer-section h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #20c997; /* Green for section headers */
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #555; /* Dark grey for links to maintain contrast */
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: #20c997; /* Green on hover */
+    text-decoration: underline;
+}
+
+.social-media a {
+    color: #333; /* Dark grey for social media icons */
+    margin: 0 10px;
+    font-size: 1.5em;
+}
+
+.social-media a:hover {
+    color: #20c997; /* Green on hover for consistency */
+}
+
+.logo p {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #888; /* Light grey for the copyright text */
+}
+
+footer .social-media {
+    display: flex;
+    align-items: center;
+}

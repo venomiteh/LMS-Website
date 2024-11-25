@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coder's Hub</title>
+    <link rel="stylesheet" href="\css\style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    
+<%- include('includes/navigation.ejs')%>
+
+<section class="hero" >
+    <div class="hero-content">
+        <h1>The Best Program to <span>Enroll</span> for Exchange</h1>
+        <p>Test</p>
+        <a href="#" class="cta-button">Find courses</a>
+    </div>
+    <div class="hero-images">
+
+        <div class="student-images">
+            <img src="heroimage03.jpg" alt="hI" class="student-img" height="400px" width="700px">
+            
+        </div>
+    </div>
+</section>
+
+
+    <section class="courses">
+        <p id="tag">popular courses</p>
+        <h2 class="section-title">Pick A Course To Get Started</h2>
+        <div class="course-cards">
+            <!-- Course Card 1 -->
+            <div class="course-card">
+                <img src="course-1.jpg" alt="Course 1 Image">
+                <div class="course-info">
+                    <span class="tag beginner">Beginner</span>
+                   <a href="#"> <h3>Build Responsive Real-World Websites with HTML and CSS</h3></a>
+                    <p class="rating">⭐⭐⭐⭐⭐ (5.0/7 Rating)</p>
+                    <p class="price">$29.00</p>
+                    <p class="details">8 Lessons · 20 Students · 3 Weeks</p>
+                </div>
+            </div>
+            <!-- Course Card 2 -->
+            <div class="course-card">
+                <img src="course-1.jpg" alt="Course 2 Image">
+                <div class="course-info">
+                    <span class="tag advanced">Advanced</span>
+                    <a href="#"><h3>Java Programming Masterclass for Software Developers</h3></a>
+                    <p class="rating">⭐⭐⭐⭐ (4.5/9 Rating)</p>
+                    <p class="price">$49.00</p>
+                    <p class="details">15 Lessons · 35 Students · 8 Weeks</p>
+                </div>
+            </div>
+            <!-- Course Card 3 -->
+            <div class="course-card">
+                <img src="course-3.jpg" alt="Course 3 Image">
+                <div class="course-info">
+                    <span class="tag intermediate">Intermediate</span>
+                    <a href="#"><h3>The Complete Camtasia Course for Content Creators</h3></a>
+                    <p class="rating">⭐⭐⭐⭐⭐ (4.9/7 Rating)</p>
+                    <p class="price">$35.00</p>
+                    <p class="details">13 Lessons · 18 Students · 3 Weeks</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="browse-more">
+            <a href="#" class="browse-btn">Browse more courses</a>
+        </div>
+    </section>
+
+
+
+
+
+    <script src="scripts.js"></script>
+</body>
+<footer>
+  <%- include('includes/footer.ejs')%>
+  </footer>
+</html>

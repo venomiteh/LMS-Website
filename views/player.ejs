@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rating and Video Section</title>
+    <link rel="stylesheet" href="\css\player.css">
+</head>
+<body>
+    <%- include('includes/navigation.ejs')%>
+
+    <div class="video-section">
+        <video controls>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="exercise-files">
+            <h3>Resources:</h3>
+            <a href="#">Exercise Files on GitHub</a>
+     
+        </div>
+
+        <div class="video-info">
+            <h3 id="Course_name">Learning the JavaScript Language</h3>
+            <p id="Instructor">Instructor: Joe Chellman</p>
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+<footer>
+    <%- include('includes/footer.ejs')%>
+</footer>
+</html>
+
+
+

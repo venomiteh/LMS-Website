@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/dash.css">
+    <title>Dashboard</title>
+</head>
+<body>
+    <%- include('includes/navigation.ejs') %>
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header"></div>
+            <ul class="list-unstyled components">
+                <li class="active"><a href="/"><span>🏠</span> Dashboard</a></li>
+                <li><a href="#course-requests-section"><span>📚</span> Course Requests</a></li>
+                <li><a href="#refund-requests"><span>💸</span> Refund Requests</a></li>
+                <li><a href="/pages"><span>🛒</span> Purchases</a></li>
+                <li><a href="/charts"><span>📊</span> Charts</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div id="content">
+            <div class="topbar">
+                <input type="search" placeholder="Search for..." class="search-bar">
+                <div class="notifications">
+                    <span class="notification-icon">🔔</span>
+                    <span class="message-icon">✉️</span>
+                    <span class="user-icon">👤</span>
+                </div>
+            </div>
+
+            <!-- Dashboard Stats -->
+            <div class="dashboard">
+                <div class="card">
+                    <h4>Sales (Monthly)</h4>
+                    <p><%= monthlyEarnings %></p>
+                </div>
+                <div class="card">
+                    <h4>Sales (Annual)</h4>
+                    <p><%= annualEarnings %></p>
+                </div>
+                <div class="card">
+                    <h4>Nb Of Users</h4>
+                    <p><%= nb_users %></p>
+                </div>
+                <div class="card">
+                    <h4>Pending Requests</h4>
+                    <p><%= pendingRequests %></p>
+                </div>
+            </div>
+
+            <button class="generate-report">Generate Report</button>
+
+            <!-- Course Requests Section -->
+            <div class="course-requests-section">
+                <h1>Course Requests</h1>
+                <div id="course-requests">
+                    <% courses.forEach(course => { %>
+                        <div class="course-row" data-id="<%= course.id %>">
+                            <div class="course-summary">
+                                <div>
+                                    <strong>Course:</strong> <%= course.title %> <br>
+                                    <small><%= course.description %></small>
+                                </div>
+                                <div>
+                                    <strong>Teacher:</strong> <%= course.teacher_name %> <br>
+                                    <small>Submitted on <%= new Date(course.submission_date).toLocaleString() %></small>
+                                </div>
+                                <div>
+
+                                    <button class="btn accept-btn" onclick="showDetails(this)">Accept</button>
+                                    <button class="btn reject-btn">Reject</button>
+                                </div>
+                            </div>
+                            <div class="course-details" id="hidden">
+                                <label>Price: <input type="number" class="price-input" placeholder="Enter price"></label>
+                                <label>Level: 
+                                    <select class="level-select">
+                                        <option value="Beginner">Beginner</option>
+                                        <option value="Intermediate">Intermediate</option>
+                                        <option value="Advanced">Advanced</option>
+                                    </select>
+                                </label>
+                                <label>Category: <input type="text" class="category-input" placeholder="Enter category"></label>
+                                <button class="btn save-btn">Save</button>
+                            </div>
+                        </div>
+                    <% }); %>
+                </div>
+            </div>
+            <div class="refund-requests-section">
+                <h1>Refund Requests</h1>
+                <div id="refund-requests">
+                    <% refunds.forEach(refund => { %>
+                        <div class="refund-row" data-id="<%= refund.id %>">
+                            <div class="refund-summary">
+                                <div>
+                                    <strong>Request ID:</strong> <%= refund.id %> <br>
+                                    <strong>Course:</strong> <%= refund.course_title %> <br>
+                                    <small>Requested by: <%= refund.user_name %></small>
+                                </div>
+                                <div>
+                                    <button class="btn show-details-btn" onclick="toggleRefundDetails(this)">Show Details</button>
+                                </div>
+                            </div>
+                            <div class="refund-details hidden">
+                                <p><strong>Reason:</strong> <%= refund.reason %></p>
+                                <p><strong>Requested Amount:</strong> $<%= refund.amount %></p>
+                                <div class="refund-actions">
+                                    <button class="btn accept-btn">Accept</button>
+                                    <button class="btn reject-btn">Decline</button>
+                                </div>
+                            </div>
+                        </div>
+                    <% }); %>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    <footer>
+        <%- include('includes/footer.ejs') %>
+    </footer>
+    <script src="\js\script.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Courses</title>
+    <link rel="stylesheet" href="\css\course.css">
+    <script src="C:\Users\user\OneDrive\Desktop\WEB_Test\script.js"></script>
+</head>
+<body>
+    <%- include('includes/navigation.ejs')%>
+
+    <section class="content-wrapper">
+    <div class="filter-section">
+        <h2>Filter by</h2>
+        
+        <!-- Subject Filter -->
+        <div class="filter-group">
+            <h3>Subject</h3>
+            <div class="checkbox">
+                <input type="checkbox" id="business">
+                <label for="business">Business (2,162)</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="computer-science">
+                <label for="computer-science">Computer Science (1,408)</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="data-science">
+                <label for="data-science">Data Science (994)</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="it">
+                <label for="it">Information Technology (746)</label>
+            </div>
+            <a href="#">Show more</a>
+        </div>
+    
+        <!-- Language Filter -->
+        <div class="filter-group">
+            <h3>Language</h3>
+            <div class="checkbox">
+                <input type="checkbox" id="english">
+                <label for="english">English (6,634)</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="french">
+                <label for="french">French (5,483)</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="spanish">
+                <label for="spanish">Spanish (5,435)</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="portuguese">
+                <label for="portuguese">Portuguese (5,138)</label>
+            </div>
+            <a href="#">Show more</a>
+        </div>
+    
+        <!-- Learning Product Filter -->
+        <div class="filter-group">
+            <h3>Learning Product</h3>
+            <div class="checkbox">
+                <input type="checkbox" id="guided-projects">
+                <label for="guided-projects">Guided Projects (546)</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="courses">
+                <label for="courses">Courses (6,491)</label>
+            </div>
+        </div>
+    
+    </div>
+
+    <div class="course-cards">
+       
+        <% courses.forEach(course => { %>
+            <div class="course-card">
+                <img src="<%= course.image %>" alt="<%= course.title %> Image">
+                <div class="course-info">
+                    <span class="tag <%= course.level.toLowerCase() %>"><%= course.level %></span>
+                    <a href="<%= course.link %>">
+                        <h3><%= course.title %></h3>
+                    </a>
+                    <p class="rating"><%= course.ratingStars %> (<%= course.rating %>/10 Rating)</p>
+                    <p class="price">$<%= course.price %></p>
+                    <p class="details"><%= course.lessons %> Lessons · <%= course.students %> Students · <%= course.duration %> Weeks</p>
+                </div>
+            </div>
+        <% }) %>
+    
+    </div>
+</section>
+
+ 
+    
+   
+</body>
+<footer>
+    <%- include('includes/footer.ejs')%>
+  </footer>
+</html>

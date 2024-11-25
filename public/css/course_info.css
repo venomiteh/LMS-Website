@@ -1,0 +1,416 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 1em 2em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-logo a {
+    text-decoration: none;
+    color: #20c997;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5em;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.nav-menu li a:hover {
+    color: #20c997;
+}
+
+/* Icons and CTA */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.cart-icon {
+    font-size: 1.2em;
+    color: #333;
+    text-decoration: none;
+}
+
+.cta-button {
+    padding: 0.5em 1.2em;
+    background-color: #20c997;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: #17a389;
+}
+
+/* Hamburger Menu (Mobile) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 0.3em;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 3px;
+}
+
+/* Media Queries for Mobile */
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        gap: 1em;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: white;
+        padding: 1em;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+.path{
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px;
+  
+ 
+    margin-bottom: 20px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.course-card {
+    background-color: #F5F2EB;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 5vh;
+}
+
+.header {
+    display: flex;
+
+    justify-content: space-between;
+}
+
+
+.instructor-info {
+    display: flex;
+    align-items: center;
+}
+
+.instructor-image {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.enroll-section {
+    margin-top: 20px;
+  
+}
+
+.enroll-btn {
+    background-color: #20c997;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.enroll-btn:hover{
+    background-color: #17a389;
+}
+
+
+
+.course-info {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 1vh;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.course-detail {
+    text-align: center;
+    margin: 10px;
+}
+
+.course-detail h3 {
+    margin: 5px 0;
+}
+
+span {
+    color: gold;
+}
+
+.navigation-tabs {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.tab {
+    margin: 0 15px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #333;
+}
+
+.tab.active {
+    font-weight: bold;
+    border-bottom: 2px solid #0056D2;
+}
+
+.tab:hover {
+    color: #0056D2;
+    text-decoration: underline;
+}
+
+/* Details to Know Section */
+.details-to-know {
+    padding: 20px;
+    background-color: #fff;
+    
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.details-to-know h2 {
+    margin-bottom: 20px;
+}
+
+.detail-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.detail-box p {
+    margin-left: 10px;
+}
+
+.icon {
+    height: 40px;
+}
+
+/* Learner Reviews Section */
+.learner-reviews {
+    padding: 20px;
+    background-color: #fff;
+
+}
+
+.learner-reviews h2 {
+    margin-bottom: 20px;
+}
+
+.review-summary h3 {
+    font-size: 2rem;
+    color: #0056D2;
+    display: inline;
+    margin-right: 10px;
+}
+
+.review-summary p {
+    display: inline;
+    font-size: 1rem;
+    color: #333;
+}
+
+.review-bar {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.review-bar p {
+    margin-right: 10px;
+}
+
+.bar {
+    background-color: #f4f4f4;
+    height: 8px;
+    width: 100%;
+    border-radius: 5px;
+    margin-right: 10px;
+    position: relative;
+}
+
+.bar-filled {
+    background-color: #0056D2;
+    height: 100%;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.reviews-list {
+    margin-top: 20px;
+}
+
+.review {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.review-icon {
+    background-color: #0056D2;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.review-text h4 {
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.review-text p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.view-more {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #0056D2;
+    text-decoration: none;
+}
+
+.view-more:hover {
+    text-decoration: underline;
+}
+
+
+#Active{
+    color: #20c997;
+}
+
+footer {
+    background-color: #f8f9fa; /* Light grey background to match the theme */
+    color: #333; /* Darker text color for contrast */
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #20c997; /* Consistent green color for the logo */
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.footer-section h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #20c997; /* Green for section headers */
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: #555; /* Dark grey for links to maintain contrast */
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: #20c997; /* Green on hover */
+    text-decoration: underline;
+}
+
+.social-media a {
+    color: #333; /* Dark grey for social media icons */
+    margin: 0 10px;
+    font-size: 1.5em;
+}
+
+.social-media a:hover {
+    color: #20c997; /* Green on hover for consistency */
+}
+
+.logo p {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #888; /* Light grey for the copyright text */
+}
+
+footer .social-media {
+    display: flex;
+    align-items: center;
+}
